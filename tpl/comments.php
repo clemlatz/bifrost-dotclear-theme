@@ -34,7 +34,7 @@ if(!empty($num)) {
     echo '<div id="commentaires">';
     if(!empty($text)) echo '<p> &#171; <em>'.$text.'...</em> &#187;<br />';
     echo '
-            <img src="http://blogs.nokto.pro/dotclear/themes/bifrost/img/commentaires.png"> <a href="http://forums.belial.fr/viewtopic.php?t='.$topic_id.'">'.$commentaires.'</a></p>
+            <img src="{{tpl:BlogThemeURL}}/img/commentaires.png"> <a href="http://forums.belial.fr/viewtopic.php?t='.$topic_id.'">'.$commentaires.'</a></p>
         </div>
     ';
 }

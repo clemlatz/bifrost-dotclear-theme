@@ -20,7 +20,7 @@ if(!empty($num)) {
     $sql_comm = mysql_query("SELECT `post_text` FROM `phpbb_posts` WHERE `topic_id` = '".$topic_id."' ORDER BY `post_id` DESC") or die("Erreur : ".mysql_error());
     $num_comm = mysql_num_rows($sql_comm);
     $num_comm--;
-    echo '&nbsp; <a href="http://forums.belial.fr/viewtopic.php?t='.$topic_id.'"><img src="http://blogs.nokto.pro/dotclear/themes/bifrost/img/commentaires.png"> '.$num_comm.'</a>';
+    echo '&nbsp; <a href="http://forums.belial.fr/viewtopic.php?t='.$topic_id.'"><img src="{{tpl:BlogThemeURL}}/img/commentaires.png"> '.$num_comm.'</a>';
 }
 
 mysql_close();
