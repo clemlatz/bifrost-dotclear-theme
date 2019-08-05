@@ -68,11 +68,9 @@
     <!-- # Entry with an excerpt -->
     <tpl:EntryIf extended="1">
       <div class="post-excerpt">
-{{tpl:EntryFirstImage class="vignette-post"}} {{tpl:EntryExcerpt}} <br />
-<a href="http://twitter.com/share" class="twitter-share-button" data-text='"{{tpl:EntryTitle encode_html="1"}}" sur le Blog Bifrost' data-count="horizontal" data-via="lebelial" data-lang="fr">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script><br />
-<iframe src="http://www.facebook.com/plugins/like.php?app_id=180835481969649&amp;href={{tpl:EntryURL}}&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font=lucida+grande&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:140px; height:21px;" allowTransparency="true"></iframe>
-</div>
-
+        <img src="{{tpl:EntryFirstImage no_tag="1"}}" class="post-vignette"/>
+	{{tpl:EntryExcerpt}}
+      </div>
     </tpl:EntryIf>
     
     <h2 class="post-title post-page">{{tpl:EntryTitle encode_html="1"}}</h2>
