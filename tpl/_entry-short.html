@@ -5,29 +5,21 @@
         <h2 class="post-title"><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle encode_html="1"}}</a></h2>
         <p class="post-day-date"><time datetime="{{tpl:EntryDate iso8601="1"}}">{{tpl:EntryDate}}</time></p>
         <tpl:EntryIf has_featured_media="1">
-            <tpl:FeaturedMedia>
-                <tpl:FeaturedMediaIf is_image="1">
-                    <div class="post-featured-media" id="featured-media-{{tpl:EntryID}}">
-                        <img src="{{tpl:FeaturedMediaImageURL size="m"}}" alt="{{tpl:FeaturedMediaTitle}}" />
-                    </div>
-                    {{tpl:else}}
-                    <div class="post-featured-media">
-                        <img src="{{tpl:BlogThemeURL}}/images/image-placeholder-600x338.jpg" alt="Image placeholder" />
-                    </div>
-                </tpl:FeaturedMediaIf>
-            </tpl:FeaturedMedia>
-        </tpl:EntryIf>
-        <tpl:EntryIf has_featured_media="0">
-            <div class="post-featured-media">
-                <img src="{{tpl:BlogThemeURL}}/images/image-placeholder-600x338.jpg" alt="Image placeholder" />
-            </div>
+          <tpl:FeaturedMedia>
+            <tpl:FeaturedMediaIf is_image="1">
+              <div class="post-featured-media" id="featured-media-{{tpl:EntryID}}">
+                <img src="{{tpl:FeaturedMediaImageURL size="o"}}" alt="{{tpl:FeaturedMediaTitle}}" />
+              </div>
+            </tpl:FeaturedMediaIf>
+          </tpl:FeaturedMedia>
         </tpl:EntryIf>
     </header>
     <!-- # Entry with an excerpt -->
     <tpl:EntryIf extended="1">
-        <div class="post-content">
-            <p>
-                {{tpl:EntryExcerpt encode_html="1" remove_html="1" cut_string="120"}}<span
+        <div class="post-content post-preview">
+            <img src="{{tpl:EntryFirstImage no_tag="1"}}" class="post-thumbnail"/>
+            <p class="post-preview-excerpt">
+                {{tpl:EntryExcerpt encode_html="1" remove_html="1" cut_string="200"}}<span
                     class="ellipsis">&nbsp;[&#8230;]</span>
             </p>
         </div>

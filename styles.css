@@ -1,27 +1,43 @@
 .post-thumbnail {
+  height: 150px;
+  width: 150px;
+}
+
+.post-featured .post-thumbnail {
   height: 272px;
   width: 272px;
 }
 
 .post-preview p {
-	font-size: 1.125rem;
+  font-size: 1.125rem;
 }
 
 @media(min-width: 768px) {
-	.post-preview {
-	  display: flex;
-	}
+  .post-featured .post-preview {
+    display: flex;
+  }
 
-	.post-preview p {
-	  margin-bottom: 0.5em;
-	}
+  .post-preview p {
+    margin-bottom: 0.5em;
+  }
 
-	.post-thumbnail {
+  .post-thumbnail {
+    height: 150px;
+    margin-right: 16px;
+    width: 150px;
+  }
+
+  .post-featured .post-thumbnail {
     flex-shrink: 0;
-	  height: 300px;
-	  margin-right: 16px;
-	  width: 300px;
-	}
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .post-preview {
+    display: flex;
+  }
 }
 
 .button {
