@@ -8,7 +8,9 @@ body {
 }
 
 .post {
+  box-sizing: border-box;
   background-color: white;
+  padding: 8px;
 }
 
 .post-thumbnail {
