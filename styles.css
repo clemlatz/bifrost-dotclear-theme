@@ -50,3 +50,19 @@ body {
 .button {
   font-size: 14px;
 }
+
+#sidebar {
+  background: #1a212b;
+}
+
+#sidebar h1,
+#sidebar h2,
+#sidebar h3,
+#sidebar h4,
+#sidebar h5,
+#sidebar h6,
+#sidebar label,
+#menu ul,
+#menu ul a {
+  color: white;
+}
