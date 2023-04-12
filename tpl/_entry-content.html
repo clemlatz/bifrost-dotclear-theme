@@ -10,8 +10,9 @@
     {{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
     <!-- # Entry with an excerpt -->
     <tpl:EntryIf extended="1">
-      <div class="post-content post-preview">
-        <img src="{{tpl:EntryFirstImage no_tag="1"}}" class="post-thumbnail" alt=""/>
+      <div class="post-preview">
+<!--        <img src="{{tpl:EntryFirstImage no_tag="1"}}" class="post-thumbnail" alt=""/>-->
+        <img src="https://placehold.co/500" class="post-thumbnail" alt=""/>
         <p class="post-preview-excerpt">
           {{tpl:EntryExcerpt}}
         </p>
