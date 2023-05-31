@@ -7,10 +7,28 @@ body {
   margin: auto;
 }
 
+#header {
+  border: 0;
+}
+
+.posts {
+  margin-left: 0;
+  width: 100%;
+}
+
+.posts article,
 .post {
+  border-top: solid 5px #f56a6a;
   box-sizing: border-box;
   background-color: white;
   padding: 8px;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.post.post-featured {
+  max-width: none;
+  width: 100%;
 }
 
 .post-thumbnail,
