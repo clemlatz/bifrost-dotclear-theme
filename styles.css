@@ -13,7 +13,10 @@ body {
   padding: 8px;
 }
 
-.post-thumbnail {
+.post-thumbnail,
+.post-featured-media img,
+.dc-post .post-excerpt img {
+  border-radius: 0;
   display: block;
   margin: 0 auto 16px;
   max-width: 90%;
@@ -24,7 +27,8 @@ body {
 }
 
 @media(min-width: 768px) {
-  .post-featured .post-preview {
+  .post-featured .post-preview,
+  .post.simple .post-preview {
     display: flex;
   }
 
@@ -32,7 +36,8 @@ body {
     margin-bottom: 0.5em;
   }
 
-  .post-featured .post-thumbnail {
+  .post-featured .post-thumbnail,
+  .dc-post .post-preview img {
     flex-shrink: 0;
     height: 300px;
     margin-right: 16px;

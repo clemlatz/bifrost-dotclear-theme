@@ -1,32 +1,21 @@
 <article class="post simple" id="p{{tpl:EntryID}}" lang="{{tpl:EntryLang}}">
     <header>
         <h2 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h2>
-        <p class="post-day-date"><time datetime="{{tpl:EntryDate iso8601=" 1"}}">{{tpl:EntryDate}}</time></p>
-        <tpl:EntryIf has_featured_media="1">
-            <tpl:FeaturedMedia>
-                <tpl:FeaturedMediaIf is_image="1">
-                    <div class="post-featured-media" id="featured-media-{{tpl:EntryID}}">
-                        <img src="{{tpl:FeaturedMediaImageURL size=" o"}}" alt="{{tpl:FeaturedMediaTitle}}" />
-                    </div>
-                    {{tpl:else}}
-                    <div class="post-featured-media">
-                        <img src="{{tpl:BlogThemeURL}}/images/image-placeholder-1920x1080.jpg"
-                            alt="Image placeholder" />
-                    </div>
-                </tpl:FeaturedMediaIf>
-            </tpl:FeaturedMedia>
-        </tpl:EntryIf>
-        <tpl:EntryIf has_featured_media="0">
-            <div class="post-featured-media">
-                <img src="{{tpl:BlogThemeURL}}/images/image-placeholder-1920x1080.jpg" alt="Image placeholder" />
-            </div>
-        </tpl:EntryIf>
+        <p class="post-day-date">
+          <a href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a> |
+          <time datetime="{{tpl:EntryDate format="%A %e %B %Y"}}">{{tpl:EntryDate format="%e %B %Y"}}</time>
+        </p>
     </header>
     <!-- # --BEHAVIOR-- publicEntryBeforeContent -->
     {{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
     <!-- # Entry with an excerpt -->
     <tpl:EntryIf extended="1">
-        <div class="post-excerpt">{{tpl:EntryExcerpt}}</div>
+      <div class="post-content post-preview">
+        <img src="{{tpl:EntryFirstImage no_tag="1"}}" class="post-thumbnail" alt=""/>
+        <p class="post-preview-excerpt">
+          {{tpl:EntryExcerpt}}
+        </p>
+      </div>
     </tpl:EntryIf>
     <div class="post-content">{{tpl:EntryContent}}</div>
     <!-- # --BEHAVIOR-- publicEntryAfterContent -->
@@ -57,11 +46,6 @@
     </tpl:Attachments>
     <div class="post-meta box">
         <p class="post-info">
-            <span class="post-author">{{tpl:lang By}} {{tpl:EntryAuthorLink}}, </span>
-
-            <span class="post-permalink"><a href="{{tpl:EntryURL}}">{{tpl:lang Permalink}}</a></span>
-        </p>
-        <p class="post-info">
             <tpl:EntryIf has_category="1">
                 <span class="post-cat">
                     {{tpl:lang Category}} : <tpl:EntryCategoriesBreadcrumb><a
@@ -74,7 +58,7 @@
         <tpl:EntryTags>
             <tpl:TagsHeader>
                 <ul class="post-tags-list">
-                    <li>{{tpl:lang Tags}} </li>
+                    <li>Auteur·trice·(s)</li>
             </tpl:TagsHeader>
             <li class="post-tags-item"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
             <tpl:TagsFooter>
